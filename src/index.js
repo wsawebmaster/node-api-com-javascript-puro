@@ -28,7 +28,7 @@ const server = http.createServer((request, response) => {
 
     response.send = (statusCode, body) => {
       response.writeHead(statusCode, { "Content-Type": "application/json" });
-      response.end(JSON.stringify(body));
+      response.end(JSON.stringify(body)); // converte para string
     };
 
     route.handler(request, response);
